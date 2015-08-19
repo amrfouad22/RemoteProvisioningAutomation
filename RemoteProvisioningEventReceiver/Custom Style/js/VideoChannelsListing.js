@@ -15,7 +15,7 @@ Insight.Common.RenderVideoChannels = function (channels) {
         var channelItem = Insight.Common.GetChannelItem(channels[i]);
         var title = channelItem.Title;
         var desc = channelItem.ChannelDescription;
-        var link = String.format(_spPageContextInfo.siteAbsoluteUrl + "/_layouts/15/videochannel.aspx?channel={0}", channelItem.ChannelID);
+        var link = String.format(_spPageContextInfo.siteAbsoluteUrl + "/portals/hub/_layouts/15/videochannel.aspx?channel={0}", channelItem.ChannelID);
         var image = channelItem.ChannelImage == null ? defaultImage : channelItem.ChannelImage.Url;
         html += String.format(template, link, title, desc, image);
     }
@@ -67,7 +67,7 @@ Insight.Common.GetItemsREST = function (listName, query, renderFunction) {
             );
 }
 Insight.Common.GetVideoChannels = function (callback) {
-    var RESTUrl = _spPageContextInfo.siteAbsoluteUrl + "/_api/VideoService/Channels";
+    var RESTUrl = _spPageContextInfo.siteAbsoluteUrl + "/portals/hub/_api/VideoService/Channels";
     $.ajax(
                 {
                     url: RESTUrl,
@@ -134,7 +134,7 @@ Insight.Common.LoadCSS = function (src, media, callback) {
 }
 var channelItems;
 SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function () {
-    if (document.location.toString().indexOf("videochannels.aspx") > -1) {
+    //if (document.location.toString().indexOf("videochannels.aspx") > -1) {
         Insight.Common.LoadScript("https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js", function () {
             Insight.Common.LoadCSS(_spPageContextInfo.siteAbsoluteUrl + "/Lists/VideoChannelStyle/Custom Style/css/mosaic.css", "screen", function () {
                 Insight.Common.LoadScript(_spPageContextInfo.siteAbsoluteUrl + "/Lists/VideoChannelStyle/Custom Style/js/mosaic.1.0.1.min.js", function () {
@@ -151,5 +151,5 @@ SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function () {
             });
         }
         );
-    }
+    //}
 });

@@ -90,6 +90,11 @@
     <Content Include="Custom Style\js\mosaic.1.0.1.min.js" />
     <Content Include="Custom Style\js\VideoChannelsListing.js" />
     <Content Include="CustomActions\ScriptLinkExample.xml" />
+    <Content Include="Pages\Content\Wiki.aspx" />
+    <Content Include="Pages\Content\Wiki.aspx.cs" />
+    <Content Include="Pages\Content\Wiki.aspx.Designer.cs" />
+    <Content Include="Pages\Page.xml" />
+    <Content Include="Views\View1.xml" />
     <Content Include="Files\FileCopy1.xml" />
     <Content Include="Lists\ChannelImages.xml" />
     <Content Include="Lists\Style.xml" />
@@ -107,6 +112,8 @@
     <Compile Include="ProvisioningHelper\CustomActionsManager.cs" />
     <Compile Include="ProvisioningHelper\FileManager.cs" />
     <Compile Include="ProvisioningHelper\ListManager.cs" />
+    <Compile Include="ProvisioningHelper\PageManager.cs" />
+    <Compile Include="ProvisioningHelper\ViewManager.cs" />
     <Compile Include="ProvisioningHelper\SequenceProcessor.cs" />
     <Compile Include="Services\AppEventReceiver.svc.cs">
       <DependentUpon>AppEventReceiver.svc</DependentUpon>

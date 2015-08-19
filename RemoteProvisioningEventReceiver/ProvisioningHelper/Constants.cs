@@ -15,7 +15,9 @@ namespace  $safeprojectname$.ProvisioningHelper
         {
             List=0,
             File=1,
-            CustomAction=2
+            CustomAction=2,
+            Page=3,
+            View=4
         }
         
         public class CustomActionLocations
@@ -44,6 +46,24 @@ namespace  $safeprojectname$.ProvisioningHelper
             public const string Recursive = "Recursive";
             public static string TaregtFolder="TargetFolder";
             public static string TaregtList = "TargetList";
+        }
+         public class PageAttributeNames
+        {
+            public const string Title = "Title";
+            public const string ContentTypeId = "ContentTypeId";
+            public const string PageLayout = "PageLayout";
+            public const string ListName = "ListName";
+            public const string ContentPath = "ContentPath";
+        }
+        public class ViewAttributeNames
+        {
+            public const string Title = "Title";
+            public const string ListName = "ListName";
+            public const string ViewType = "ViewType";
+            public const string DefaultView = "DefaultView";
+            public const string ViewFields = "ViewFields";
+            public const string JSLink = "JSLink";
+            public const string Toolbar = "Toolbar";
         }
     }
 }

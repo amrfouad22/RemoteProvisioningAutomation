@@ -74,9 +74,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ProvisioningHelper\PageManager.cs" />
+    <None Include="ProvisioningHelper\ViewManager.cs" />
     <None Include="ProvisioningHelper\SequenceProcessor.cs" />
     <None Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </None>
+    <None Include="Pages\Content\Wiki.aspx.cs">
+      <DependentUpon>Wiki.aspx</DependentUpon>
+    </None>
+    <None Include="Pages\Content\Wiki.aspx.designer.cs">
+      <DependentUpon>Wiki.aspx.cs</DependentUpon>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="ProvisioningHelper\Constants.cs" />
@@ -130,10 +138,15 @@
     <Content Include="Files\FileCopy1.xml" />
     <Content Include="Global.asax" />
     <Content Include="Lists\ChannelImages.xml" />
-    <Content Include="Lists\Style.xml" />
+    <Content Include="Lists\Style.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Lists\VideoChannelsList.xml" />
+    <Content Include="Pages\Content\Wiki.aspx" />
+    <Content Include="Pages\Page.xml" />
     <Content Include="ProvisioningSequence.xml" />
     <Content Include="Services\AppEventReceiver.svc" />
+    <Content Include="Views\View1.xml" />
     <Content Include="__TemplateIcon.ico" />
   </ItemGroup>
   <ItemGroup />

@@ -54,13 +54,26 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="CustomActionsManager.cs">CustomActionsManager.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="FileManager.cs">FileManager.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ListManager.cs">ListManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PageManager.cs">PageManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ViewManager.cs">ViewManager.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SequenceProcessor.cs">SequenceProcessor.cs</ProjectItem>
       </Folder>
       <Folder Name="Services" TargetFolderName="Services">
         <ProjectItem ReplaceParameters="true" TargetFileName="AppEventReceiver.svc">AppEventReceiver.svc</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="AppEventReceiver.svc.cs">AppEventReceiver.svc.cs</ProjectItem>
       </Folder>
-      <ProjectItem ReplaceParameters="false" TargetFileName="ProvisioningSequence.xml">ProvisioningSequence.xml</ProjectItem>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <Folder Name="Content" TargetFolderName="Content">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Wiki.aspx">Wiki.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Wiki.aspx.cs">Wiki.aspx.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Wiki.aspx.designer.cs">Wiki.aspx.designer.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Page.xml">Page.xml</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="false" TargetFileName="View1.xml">View1.xml</ProjectItem>
+      </Folder>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ProvisioningSequence.xml">ProvisioningSequence.xml</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="SharePointContext.cs">SharePointContext.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="TokenHelper.cs">TokenHelper.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>

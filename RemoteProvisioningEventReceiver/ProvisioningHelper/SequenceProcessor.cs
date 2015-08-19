@@ -35,6 +35,14 @@ namespace  $safeprojectname$.ProvisioningHelper
                         CustomActionsManager actions = new CustomActionsManager();
                         actions.ProcessSingleAction(context, add, HostingEnvironment.MapPath(item.Attributes[Constants.SequenceItemAttributes.Path].Value));
                         break;
+                    case Constants.RemoteProvisioningType.Page:
+                        PageManager page = new PageManager();
+                        page.ProcessPageCreation(context, add, HostingEnvironment.MapPath(item.Attributes[Constants.SequenceItemAttributes.Path].Value));
+                        break;
+                    case Constants.RemoteProvisioningType.View:
+                        ViewManager view = new ViewManager();
+                        view.ProcessListView(context, add, HostingEnvironment.MapPath(item.Attributes[Constants.SequenceItemAttributes.Path].Value));
+                        break;
                     default:
                         throw new Exception("Not Supported Remote Provisioning Type");
                 }
