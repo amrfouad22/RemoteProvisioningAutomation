@@ -16,34 +16,13 @@
   <TemplateContent>
     <Project TargetFileName="ProjectTemplate.csproj" File="ProjectTemplate.csproj" ReplaceParameters="true">
       <Folder Name="App_Data" TargetFolderName="App_Data" />
-     <Folder Name="Custom Style" TargetFolderName="Custom Style">
-        <Folder Name="css" TargetFolderName="css">
-          <ProjectItem ReplaceParameters="true" TargetFileName="mosaic.css">mosaic.css</ProjectItem>
-        </Folder>
-        <Folder Name="img" TargetFolderName="img">
-          <ProjectItem ReplaceParameters="false" TargetFileName="bg-black.png">bg-black.png</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="bg-grid.png">bg-grid.png</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="defaultChannel.jpg">defaultChannel.jpg</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="hover-magnify.png">hover-magnify.png</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="progress.gif">progress.gif</ProjectItem>
-        </Folder>
-        <Folder Name="js" TargetFolderName="js">
-          <ProjectItem ReplaceParameters="true" TargetFileName="mosaic.1.0.1.min.js">mosaic.1.0.1.min.js</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="VideoChannelsListing.js">VideoChannelsListing.js</ProjectItem>
-        </Folder>
-      </Folder>
       <Folder Name="CustomActions" TargetFolderName="CustomActions">
-        <ProjectItem ReplaceParameters="true" TargetFileName="ScriptLinkExample.xml">ScriptLinkExample.xml</ProjectItem>
       </Folder>
       <Folder Name="Files" TargetFolderName="Files">
-        <ProjectItem ReplaceParameters="true" TargetFileName="FileCopy1.xml">FileCopy1.xml</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
       <Folder Name="Lists" TargetFolderName="Lists">
-        <ProjectItem ReplaceParameters="true" TargetFileName="ChannelImages.xml">ChannelImages.xml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="Style.xml">Style.xml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="VideoChannelsList.xml">VideoChannelsList.xml</ProjectItem>
       </Folder>
       <Folder Name="Models" TargetFolderName="Models" />
       <Folder Name="Properties" TargetFolderName="Properties">
@@ -63,17 +42,10 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="AppEventReceiver.svc.cs">AppEventReceiver.svc.cs</ProjectItem>
       </Folder>
       <Folder Name="Pages" TargetFolderName="Pages">
-        <Folder Name="Content" TargetFolderName="Content">
-          <ProjectItem ReplaceParameters="false" TargetFileName="Wiki.aspx">Wiki.aspx</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="Wiki.aspx.cs">Wiki.aspx.cs</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="Wiki.aspx.designer.cs">Wiki.aspx.designer.cs</ProjectItem>
-        </Folder>
-        <ProjectItem ReplaceParameters="false" TargetFileName="Page.xml">Page.xml</ProjectItem>
       </Folder>
       <Folder Name="Views" TargetFolderName="Views">
-        <ProjectItem ReplaceParameters="false" TargetFileName="View1.xml">View1.xml</ProjectItem>
       </Folder>
-        <ProjectItem ReplaceParameters="false" TargetFileName="ProvisioningSequence.xml">ProvisioningSequence.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="ProvisioningSequence.xml">ProvisioningSequence.xml</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="SharePointContext.cs">SharePointContext.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="TokenHelper.cs">TokenHelper.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>

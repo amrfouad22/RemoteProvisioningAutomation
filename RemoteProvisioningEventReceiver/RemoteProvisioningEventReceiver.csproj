@@ -80,12 +80,6 @@
     <None Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </None>
-    <None Include="Pages\Content\Wiki.aspx.cs">
-      <DependentUpon>Wiki.aspx</DependentUpon>
-    </None>
-    <None Include="Pages\Content\Wiki.aspx.designer.cs">
-      <DependentUpon>Wiki.aspx.cs</DependentUpon>
-    </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="ProvisioningHelper\Constants.cs" />
     <None Include="ProvisioningHelper\CustomActionsManager.cs" />
@@ -126,30 +120,18 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Custom Style\css\mosaic.css" />
-    <Content Include="Custom Style\img\bg-black.png" />
-    <Content Include="Custom Style\img\bg-grid.png" />
-    <Content Include="Custom Style\img\defaultChannel.jpg" />
-    <Content Include="Custom Style\img\hover-magnify.png" />
-    <Content Include="Custom Style\img\progress.gif" />
-    <Content Include="Custom Style\js\mosaic.1.0.1.min.js" />
-    <Content Include="Custom Style\js\VideoChannelsListing.js" />
-    <Content Include="CustomActions\ScriptLinkExample.xml" />
-    <Content Include="Files\FileCopy1.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Lists\ChannelImages.xml" />
-    <Content Include="Lists\Style.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Lists\VideoChannelsList.xml" />
-    <Content Include="Pages\Content\Wiki.aspx" />
-    <Content Include="Pages\Page.xml" />
     <Content Include="ProvisioningSequence.xml" />
     <Content Include="Services\AppEventReceiver.svc" />
-    <Content Include="Views\View1.xml" />
     <Content Include="__TemplateIcon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CustomActions\" />
+    <Folder Include="Files\" />
+    <Folder Include="Lists\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<List xmlns:ows="Microsoft SharePoint" Title="VideoChannelsMetaData" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/VideoChannelsMetaData" BaseType="100">
-  <Fields>
-    <Field ID="{8DA17379-93B7-49C2-8BC5-0ECCF42F40DE}" Name="ChannelImage" DisplayName="ChannelImage" Type="URL" Format="Image"   SourceID="http://schemas.microsoft.com/sharepoint/v3"/>
-    <Field ID="{EF236D32-08DB-4BB8-AB1F-9C0BFF064B3C}" Name="ChannelID" DisplayName="ChannelID" Type="Text"  SourceID="http://schemas.microsoft.com/sharepoint/v3"/>
-    <Field ID="{C43E5CD1-AD5D-424C-B4BD-CB2BE035C0D0}" Name="ChannelDescription" DisplayName="ChannelDescription" Type="Note"  SourceID="http://schemas.microsoft.com/sharepoint/v3"/>
-  </Fields> 
-</List>

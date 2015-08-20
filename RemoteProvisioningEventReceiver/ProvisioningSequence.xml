@@ -1,8 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Sequence>
-  <Item Order="1" Type="List" Path="~/Lists/ChannelImages.xml"></Item>
-  <Item Order="2" Type="List" Path="~/Lists/Style.xml"></Item>
-  <Item Order="3" Type="List" Path="~/Lists/VideoChannelsList.xml"></Item>
-  <Item Order="4" Type="File" Path="~/Files/FileCopy1.xml"></Item>
-  <Item Order="5" Type="CustomAction" Path="~/CustomActions/ScriptLinkExample.xml"></Item>
+ 
 </Sequence>

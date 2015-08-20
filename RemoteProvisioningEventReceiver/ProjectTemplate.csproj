@@ -81,24 +81,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Custom Style\css\mosaic.css" />
-    <Content Include="Custom Style\img\bg-black.png" />
-    <Content Include="Custom Style\img\bg-grid.png" />
-    <Content Include="Custom Style\img\defaultChannel.jpg" />
-    <Content Include="Custom Style\img\hover-magnify.png" />
-    <Content Include="Custom Style\img\progress.gif" />
-    <Content Include="Custom Style\js\mosaic.1.0.1.min.js" />
-    <Content Include="Custom Style\js\VideoChannelsListing.js" />
-    <Content Include="CustomActions\ScriptLinkExample.xml" />
-    <Content Include="Pages\Content\Wiki.aspx" />
-    <Content Include="Pages\Content\Wiki.aspx.cs" />
-    <Content Include="Pages\Content\Wiki.aspx.Designer.cs" />
-    <Content Include="Pages\Page.xml" />
-    <Content Include="Views\View1.xml" />
-    <Content Include="Files\FileCopy1.xml" />
-    <Content Include="Lists\ChannelImages.xml" />
-    <Content Include="Lists\Style.xml" />
-    <Content Include="Lists\VideoChannelsList.xml" />
     <Content Include="Services\AppEventReceiver.svc" />
     <Content Include="Web.config" />
     <Content Include="ProvisioningSequence.xml" />

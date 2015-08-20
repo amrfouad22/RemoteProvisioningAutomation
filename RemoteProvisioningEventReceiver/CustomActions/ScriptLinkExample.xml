@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<CustomAction
-    Name="CustomJS"
-    ScriptSrc="~siteCollection/Lists/VideoChannelStyle/Custom Style/js/VideoChannelsListing.js"
-    Location="ScriptLink"
-    Sequence="100"
-    Description="Custom JS injection"
-    >
-</CustomAction>

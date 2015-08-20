@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<FileCopies>
-  <FileCopy Name="Custom Styles" LocalFolder="Custom Style" Filter="*" Recursive="TRUE" TargetList="VideoChannelStyle"></FileCopy>
-</FileCopies>

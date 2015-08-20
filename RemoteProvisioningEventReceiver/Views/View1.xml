@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Views>
-  <View Title="Test" ListName="List1" ViewFields="Title,FielRef" ViewType="1" DefaultView="True" JSLink="~Site/Lists/Scripts/ViewScript/js/ImageView.js" Toolbar="Standard">
-  </View>
-</Views>
