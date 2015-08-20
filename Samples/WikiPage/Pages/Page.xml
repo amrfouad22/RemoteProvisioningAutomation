@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages>
+  <Page Title="ChannelListingPage.aspx" ContentTypeId="0x01010800AF688F688B49E949AAC0D6BC08CD5EFE" ListName="Site Pages" ContentPath="~/Pages/Content/Wiki.aspx">
+    <Fields>
+      <Description>This is the Page Description</Description>
+    </Fields>
+  </Page>
+</Pages>
