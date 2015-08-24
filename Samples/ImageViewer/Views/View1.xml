@@ -1,3 +1,3 @@
 ﻿<Views>
-  <View Title="ImageViewer" ListName="Photos" ViewFields="Title,FileRef" JSLink="~site/Lists/Scripts/15/js/ImageView.js" DefaultView="True" Toolbar="Standard"></View>
+  <View Title="ImageViewer" ListName="Photos" ViewFields="Title,FileRef" JSLink="~Site/Lists/Scripts/viewScript/ImageView.js" DefaultView="True" Toolbar="Standard"></View>
 </Views>

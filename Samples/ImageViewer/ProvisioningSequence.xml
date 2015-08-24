@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Sequence>
   <Item Order="1" Type="List" Path="~/Lists/Scripts.xml"></Item>
-  <Item Order="2" Type="File" Path="~/Files/FileCopy1.xml"></Item>
-  <Item Order="3" Type="List" Path="~/Lists/PictureLib.xml"></Item>
+  <Item Order="2" Type="List" Path="~/Lists/PictureLib.xml"></Item>
+  <Item Order="3" Type="File" Path="~/Files/FileCopy1.xml"></Item>
   <Item Order="4" Type="View" Path="~/Views/View1.xml"></Item>
 </Sequence>
