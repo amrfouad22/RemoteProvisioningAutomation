@@ -6,6 +6,7 @@ using System.Web;
 using System.Xml;
 using  $safeprojectname$.ProvisioningHelper;
 using System.Web.Hosting;
+using System.Xml.XPath;
 
 namespace  $safeprojectname$.ProvisioningHelper
 {
@@ -14,9 +15,15 @@ namespace  $safeprojectname$.ProvisioningHelper
         public void Process(ClientContext context,bool add,string path)
         {
             XmlDocument seq = new XmlDocument();
-            seq.Load(HostingEnvironment.MapPath("~/"+path));
-            foreach (XmlNode item in seq.SelectNodes("/Sequence/Item"))
+            seq.Load(HostingEnvironment.MapPath("~/" + path));
+            XPathNavigator nav = seq.CreateNavigator();
+            XPathExpression exp= nav.Compile(@"/Sequence/Item");
+            exp.AddSort("@Order", add ? XmlSortOrder.Ascending : XmlSortOrder.Descending,XmlCaseOrder.None,string.Empty, XmlDataType.Number);
+            //XmlNodeList items = seq.SelectNodes("/Sequence/Item");
+            foreach (XPathNavigator navItem in nav.Select(exp))
             {
+                XmlNode item = (XmlNode)navItem.UnderlyingObject;
+
                 switch((Constants.RemoteProvisioningType)Enum.Parse(typeof(Constants.RemoteProvisioningType),item.Attributes[Constants.SequenceItemAttributes.Type].Value))
                 {
                     case Constants.RemoteProvisioningType.List:

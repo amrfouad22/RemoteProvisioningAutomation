@@ -1,5 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Views>
-  <View Title="Test" ListName="List1" ViewFields="Title,FielRef" ViewType="1" DefaultView="True" JSLink="~Site/Lists/Scripts/ViewScript/js/ImageView.js" Toolbar="Standard">
-  </View>
+﻿<Views>
+  <View Title="ImageViewer" ListName="Photos" ViewFields="Title,FileRef" JSLink="~site/Lists/Scripts/15/js/ImageView.js" DefaultView="True" Toolbar="Standard"></View>
 </Views>
