@@ -1,11 +1,34 @@
-(function () {
-    // Initialize the variable that stores the objects.
-    var overrideCtx = {};
-    overrideCtx.Templates = {};
-
-    // Assign functions or plain html strings to the templateset objects:
-    // header, footer and item.
-    overrideCtx.Templates.Header = '<section id="main" class="no-padding">\
+(function () { 
+ 
+    // jQuery library is required in this sample 
+    // Fallback to loading jQuery from a CDN path if the local is unavailable 
+    (window.jQuery || document.write('<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.0.min.js"><\/script>')); 	
+    //register css and javascript
+    document.write('<script src="https://testremoteprovisioning.azurewebsites.net/15/js/bootstrap.min.js"><\/script>');
+    document.write('<script src="https://testremoteprovisioning.azurewebsites.net/15/js/masonry.pkgd.min.js"><\/script>');
+    document.write('<script src="https://testremoteprovisioning.azurewebsites.net/15/js/jquery.fancybox.pack.js"><\/script>');
+    document.write('<script src="https://testremoteprovisioning.azurewebsites.net/15/js/raphael.min.js"><\/script>');
+    document.write('<script src="https://testremoteprovisioning.azurewebsites.net/15/js/main.js"><\/script>');
+    //css
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/buttons/buttons.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/buttons/social-icons.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/font-awesome.min.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/bootstrap.min.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/settings.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/jquery.fancybox.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/animate.css">'); 
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/style.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/responsive.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/customizer/pages.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/customizer/elements-pages-customizer.css">');
+    document.write('<link rel="stylesheet" href="https://testremoteprovisioning.azurewebsites.net/15/css/ie/ie.css">');
+   
+    // Create object that have the context information about the field that we want to change it's output render  
+    var imageViewerContext = {}; 
+    imageViewerContext.Templates = {}; 
+ 
+    // Be careful when add the header for the template, because it's will break the default list view render 
+    imageViewerContext.Templates.Header = '<section id="main" class="no-padding">\
                                         <header class="page-header">\
                                             <div class="container">\
                                                 <h1 class="title"><#=ctx.ListTitle#></h1>\
@@ -14,109 +37,26 @@
                                         <div class="container">\
                                             <div class="row">\
                                                 <div class="content col-sm-12 col-md-12">\
-                                                    <div class="row">';
-    // This template is assigned to the CustomItem function.
-    overrideCtx.Templates.Item = customItem;
-    overrideCtx.Templates.Footer =                  '</div>\
+                                                    <div class="row">'; 
+    imageViewerContext.Templates.Footer =   '</div>\
                                                      <div class="clearfix"></div>\
                                                 </div>\
 	                                        </div>\
                                         </div>\
-                                    </section>';
-
-    // Set the template to the:
-    //  Picture Library definition ID 109
-    //  Base view ID
-    overrideCtx.BaseViewID = 2;
-    overrideCtx.ListTemplateType = 109;
-
-    // Assign a function to handle the
-    // PreRender and PostRender events
-    overrideCtx.OnPreRender = preRenderHandler;
-    overrideCtx.OnPostRender = postRenderHandler;
-
-    // Register the template overrides.
-    SPClientTemplates.TemplateManager.RegisterTemplateOverrides(overrideCtx);
-})();
-
-// This function builds the output for the item template.
-// It uses the context object to access announcement data.
-function customItem(ctx) {
-
-    // Build a listitem entry for every announcement in the list.
-    var itemTemplate='<div class="images-box col-sm-3 col-md-3">\
-		                    <a class="gallery-images" rel="fancybox" href="{0}">\
-			                    <img ng-src="{0}" width="200"  alt="{1}">\
+                                    </section>';; 
+ 
+    // Add OnPostRender event handler to add accordion click events and style 
+    imageViewerContext.OnPostRender = function(){console.log("this is the end");}; 
+ 
+    // This line of code tell TemplateManager that we want to change all HTML for item row render 
+    imageViewerContext.Templates.Item = function(ctx){
+        return '<div class="images-box col-sm-3 col-md-3">\
+		                    <a class="gallery-images" rel="fancybox" href="'+ctx.CurrentItem["FileRef"]+'">\
+			                    <img ng-src="'+ctx.CurrentItem["FileRef"]+'" width="200"  alt="'+ctx.CurrentItem["Title"]+'">\
 			                    <span class="bg-images"><i class="fa fa-search"></i></span>\
 		                    </a>\
-	                    </div>'
-    return String.fromat(itemTemplate, ctx.CurrentItem.FileRef,ctx.CurrentItem.Title);
-}
-
-// The preRenderHandler attends the OnPreRender event
-function preRenderHandler(ctx) {
-    var hostUrl = _spPageContextInfo.siteAbsoluteUrl+"/Lists/Scripts";
-    Insight.Common.LoadScript("https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js", function () {
-        Insight.Common.LoadCSS(hostUrl + "/15/css/mosaic.css", "screen", function () {
-            Insight.Common.LoadCSS(hostUrl + "/15/css/jquery.fancybox.css", "screen", function () {
-                Insight.Common.LoadCSS(hostUrl + "/15/css/style.css", "screen", function () {
-                    Insight.Common.LoadScript("https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", function () {
-                        Insight.Common.LoadScript(hostUrl+"15/js/bootstrap.min.js", function () {
-                            Insight.Common.LoadScript(hostUrl + "15/js/masonry.pkgd.min.js", function () {
-                                Insight.Common.LoadScript(hostUrl + "15/js/jquery.fancybox.pack.js", function () {
-                                    Insight.Common.LoadScript(hostUrl + "15/js/jquery.raphael.min.js", function () {
-                                        Insight.Common.LoadScript(hostUrl + "15/js/main.js", function () {
-                                        });
-                                    });
-                                });
-                            });
-                        });
-                    });
-                });
-            });
-        });
-    });     
-}
-
-// The postRenderHandler attends the OnPostRender event
-function postRenderHandler(ctx) {
-
-}
-
-
-Insight.Common.LoadScript = function (src, callback) {
-    var s,
-        r,
-        t;
-    r = false;
-    s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.src = src;
-    s.onload = s.onreadystatechange = function () {
-        //console.log( this.readyState ); //uncomment this line to see which ready states are called.
-        if (!r && (!this.readyState || this.readyState == 'complete')) {
-            r = true;
-            callback();
-        }
-    };
-    document.getElementsByTagName('head')[0].appendChild(s);
-}
-Insight.Common.LoadCSS = function (src, media, callback) {
-    var s,
-        r,
-        t;
-    r = false;
-    s = document.createElement('link');
-    s.type = 'text/css';
-    s.rel = "stylesheet";
-    s.media = media;
-    s.href = src;
-    s.onload = s.onreadystatechange = function () {
-        //console.log( this.readyState ); //uncomment this line to see which ready states are called.
-        if (!r && (!this.readyState || this.readyState == 'complete')) {
-            r = true;
-            callback();
-        }
-    };
-    document.getElementsByTagName('head')[0].appendChild(s);
-}
+	                    </div>';
+    }; 
+    SPClientTemplates.TemplateManager.RegisterTemplateOverrides(imageViewerContext); 
+ 
+})(); 
