@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FileCopies>
+  <FileCopy Name="Scripts" LocalFolder="ViewScript" Filter="*" Recursive="TRUE" TargetList="Scripts"></FileCopy>
+</FileCopies>
