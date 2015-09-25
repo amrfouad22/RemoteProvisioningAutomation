@@ -74,6 +74,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ProvisioningHelper\BaseManager.cs" />
+    <None Include="ProvisioningHelper\ThemeManager.cs" />
     <None Include="ProvisioningHelper\PageManager.cs" />
     <None Include="ProvisioningHelper\ViewManager.cs" />
     <None Include="ProvisioningHelper\SequenceProcessor.cs" />

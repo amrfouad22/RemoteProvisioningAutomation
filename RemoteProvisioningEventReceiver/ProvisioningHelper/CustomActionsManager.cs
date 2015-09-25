@@ -8,22 +8,11 @@ using System.Web;
 using System.Web.Hosting;
 using System.Xml;
 
-namespace  $safeprojectname$.ProvisioningHelper
+namespace $safeprojectname$.ProvisioningHelper
 {
-    public class CustomActionsManager
+    public class CustomActionsManager:BaseManager
     {
-        public void  ProcessActions(ClientContext context,bool add)
-        {
-            System.Diagnostics.Trace.WriteLine("Start Processing User Custom Action definitions.....");
-            System.Diagnostics.Trace.WriteLine("Processing files @" + HostingEnvironment.MapPath("~/" + Constants.CUSTOM_ACTIONS_FOLDER));
-            foreach (string customActionDef in Directory.GetFiles(HostingEnvironment.MapPath("~/" + Constants.CUSTOM_ACTIONS_FOLDER)))
-            {
-                ProcessSingleAction(context, add, customActionDef);
-            }
-
-        }
-
-        public void ProcessSingleAction(ClientContext context, bool add,string customActionDef)
+        public override void Process(ClientContext context, bool add, string customActionDef)
         {
             context.Load(context.Web, w => w.ServerRelativeUrl, w => w.Url);
             context.ExecuteQuery();

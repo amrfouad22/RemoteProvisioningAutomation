@@ -8,9 +8,9 @@ using System.Xml;
 
 namespace $safeprojectname$.ProvisioningHelper
 {
-    public class ViewManager
+    public class ViewManager:BaseManager
     {
-      
+
         /// <summary>
         /// constructor with no parameter, this will keep the default Page definiton folder as defined int the variable region
         /// </summary>
@@ -22,17 +22,17 @@ namespace $safeprojectname$.ProvisioningHelper
         /// </summary>
         /// <param name="context"></param>
         /// <param name="web"></param>
-     
+
         /// <summary>
         /// creates a pages using a single definition file
         /// </summary>
         /// <param name="context"></param>
         /// <param name="def"></param>
-        public void ProcessListView(ClientContext context, bool add, string def)
+        public override void Process(ClientContext context, bool add, string def)
         {
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(System.IO.File.ReadAllText(def));
-            XmlNodeList views= doc.SelectNodes("Views/View");
+            XmlNodeList views = doc.SelectNodes("Views/View");
             if (add)
             {
                 foreach (XmlNode view in views)
@@ -44,7 +44,7 @@ namespace $safeprojectname$.ProvisioningHelper
                     info.Title = view.Attributes[Constants.ViewAttributeNames.Title].Value;
                     info.ViewTypeKind = (ViewType)int.Parse(view.Attributes[Constants.ViewAttributeNames.ViewType].Value);
                     info.ViewFields = view.Attributes[Constants.ViewAttributeNames.ViewFields].Value.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                    View newView=dest.Views.Add(info);
+                    View newView = dest.Views.Add(info);
                     context.ExecuteQuery();
                     newView.Toolbar = view.Attributes[Constants.ViewAttributeNames.Toolbar].Value;
                     newView.JSLink = view.Attributes[Constants.ViewAttributeNames.JSLink].Value;
@@ -61,7 +61,7 @@ namespace $safeprojectname$.ProvisioningHelper
                     ViewCollection listViews = dest.Views;
                     context.Load(listViews);
                     context.ExecuteQuery();
-                    foreach (View viewItem  in listViews)
+                    foreach (View viewItem in listViews)
                     {
                         if (viewItem.Title == view.Attributes[Constants.ViewAttributeNames.Toolbar].Value)
                             viewItem.DeleteObject();

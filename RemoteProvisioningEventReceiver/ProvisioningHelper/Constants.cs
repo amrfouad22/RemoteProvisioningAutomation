@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace  $safeprojectname$.ProvisioningHelper
+namespace $safeprojectname$.ProvisioningHelper
 {
     public class Constants
     {
         public const string LIST_DEF_FOLDER = "Lists";
         public const string FILE_COPY_DEF_FOLDER = "Files";
-        public static string CUSTOM_ACTIONS_FOLDER="CustomActions";
-        public static string Type="Type";
-        public  enum  RemoteProvisioningType
+        public static string CUSTOM_ACTIONS_FOLDER = "CustomActions";
+        public static string Type = "Type";
+        public enum RemoteProvisioningType
         {
-            List=0,
-            File=1,
-            CustomAction=2,
-            Page=3,
-            View=4
+            List = 0,
+            File = 1,
+            CustomAction = 2,
+            Page = 3,
+            View = 4,
+            Theme=5
         }
-        
+
         public class CustomActionLocations
         {
             public const string ScriptLink = "ScriptLink";
@@ -31,7 +32,7 @@ namespace  $safeprojectname$.ProvisioningHelper
             public const string ScriptBlock = "ScriptBlock";
             public const string Location = "Location";
             public static string Sequence = "Sequence";
-            public static string Name="Name";
+            public static string Name = "Name";
 
         }
         public class SequenceItemAttributes
@@ -44,10 +45,10 @@ namespace  $safeprojectname$.ProvisioningHelper
             public const string LocalFolder = "LocalFolder";
             public const string Filter = "Filter";
             public const string Recursive = "Recursive";
-            public static string TaregtFolder="TargetFolder";
+            public static string TaregtFolder = "TargetFolder";
             public static string TaregtList = "TargetList";
         }
-         public class PageAttributeNames
+        public class PageAttributeNames
         {
             public const string Title = "Title";
             public const string ContentTypeId = "ContentTypeId";
@@ -64,6 +65,18 @@ namespace  $safeprojectname$.ProvisioningHelper
             public const string ViewFields = "ViewFields";
             public const string JSLink = "JSLink";
             public const string Toolbar = "Toolbar";
+        }
+
+        public class ThemeAttributeNames
+        {
+            public const string Title = "Title";
+            public const string Name = "Name";
+            public const string SPColorFile = "SPColorFile";
+            public const string MasterPageUrl = "MasterPageUrl";
+            public const string ImageUrl = "ImageUrl";
+            public const string FontFile = "FontFile";
+            public const string DisplayOrder = "DisplayOrder";
+
         }
     }
 }

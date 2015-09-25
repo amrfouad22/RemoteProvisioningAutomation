@@ -31,6 +31,8 @@
       <Folder Name="ProvisioningHelper" TargetFolderName="ProvisioningHelper">
         <ProjectItem ReplaceParameters="true" TargetFileName="Constants.cs">Constants.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="CustomActionsManager.cs">CustomActionsManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="BaseManager.cs">BaseManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ThemeManager.cs">ThemeManager.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="FileManager.cs">FileManager.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ListManager.cs">ListManager.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="PageManager.cs">PageManager.cs</ProjectItem>

@@ -93,6 +93,8 @@
     <Compile Include="ProvisioningHelper\Constants.cs" />
     <Compile Include="ProvisioningHelper\CustomActionsManager.cs" />
     <Compile Include="ProvisioningHelper\FileManager.cs" />
+    <Compile Include="ProvisioningHelper\ThemeManager.cs" />
+    <Compile Include="ProvisioningHelper\BaseManager.cs" />
     <Compile Include="ProvisioningHelper\ListManager.cs" />
     <Compile Include="ProvisioningHelper\PageManager.cs" />
     <Compile Include="ProvisioningHelper\ViewManager.cs" />
